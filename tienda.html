@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPATERIA DANIELA - Tienda</title>
+    <link rel="stylesheet" href="styles/tienda.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Zapatería Daniela</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contáctanos</a>
+        </nav>
+    </header>
+
+    <section class="catalog">
+        <h1>Catálogo de Zapatos</h1>
+        <div class="image-grid">
+            <!-- Producto 1 -->
+            <div class="Producto">
+                <div class="image-item" id="producto1">
+                    <img src="img/zapatos1.jpg" alt="Producto 1" id="imagen1">
+                    <h3 id="nombre1">Noelle</h3>
+                    <div class="image-description" id="precio1">$ 80.000</div>
+                    <div class="hover-description" id="descripcion1">Zapato cómodo y elegante para el día a día.</div>
+                </div>
+                    <button id="boton-comprar1" class="boton-comprar">Comprar</button>
+            </div>
+            
+            <div class="Producto">
+                <!-- Producto 2 -->
+                <div class="image-item" id="producto2">
+                    <img src="img/zapatos2.jpg" alt="Producto 2" id="imagen2">
+                    <h3 id="nombre2">Marie</h3>
+                    <div class="image-description" id="precio2">$ 120.000</div>
+                    <div class="hover-description" id="descripcion2">Ideal para ocasiones especiales.</div>
+                </div>
+                <button id="boton-comprar2" class="boton-comprar">Comprar</button>
+            </div>
+
+            <div class="Producto">
+                <!-- Producto 3 -->
+                <div class="image-item" id="producto3">
+                    <img src="img/zapatos3.jpg" alt="Producto 3" id="imagen3">
+                    <h3 id="nombre3">Kala</h3>
+                    <div class="image-description" id="precio3">$ 130.000</div>
+                    <div class="hover-description" id="descripcion3">Versátil y a la moda.</div>
+                </div>
+                <button id="boton-comprar3" class="boton-comprar">Comprar</button>
+            </div>
+            
+            <div class="Producto">
+                <!-- Producto 4 -->
+                <div class="image-item" id="producto4">
+                    <img src="img/zapatos4.jpg" alt="Producto 4" id="imagen4">
+                    <h3 id="nombre4">Anne</h3>
+                    <div class="image-description" id="precio4">$ 110.000</div>
+                    <div class="hover-description" id="descripcion4">Combinación perfecta de estilo y confort.</div>  
+                </div>
+                <button id="boton-comprar4" class="boton-comprar">Comprar</button>
+            </div>
+            
+            <div class="Producto">
+                <!-- Producto 5 -->
+                <div class="image-item" id="producto5">
+                    <img src="img/zapatos5.jpeg" alt="Producto 5" id="imagen5">
+                    <h3 id="nombre5">Charlotte</h3>
+                    <div class="image-description" id="precio5">$ 98.000</div>
+                    <div class="hover-description" id="descripcion5">Un toque de elegancia para tu outfit.</div> 
+                </div>
+                <button id="boton-comprar5" class="boton-comprar">Comprar</button>
+            </div>
+
+            <div class="Producto">
+                <!-- Producto 6 -->
+                <div class="image-item" id="producto6">
+                    <img src="img/zapatos6.jfif" alt="Producto 6" id="imagen6">
+                    <h3 id="nombre6">Paulina</h3>
+                    <div class="image-description" id="precio6">$ 95.000</div>
+                    <div class="hover-description" id="descripcion6">Perfecto para cualquier evento.</div>  
+                </div>
+                <button id="boton-comprar6" class="boton-comprar">Comprar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Zapatería Daniela. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-compra" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+            <h2>Completa tu compra</h2>
+            <p id="detalle-producto"></p>
+            <form id="form-compra">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <button type="submit" id="confirmar-compra">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="tienda.js"></script>
+    
+</body>
+</html>

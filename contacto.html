@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPATERIA DANIELA - Contáctanos</title>
+    <link rel="stylesheet" href="styles/contacto.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="Contacto.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Zapatería Daniela</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contáctanos</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-section">
+            <h2>Contáctanos</h2>
+            <p>Si tienes preguntas o inquietudes, no dudes en escribirnos:</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info.danielazapateria@gmail.com">info.danielazapateria@gmail.com</a></p>
+                <p>Teléfono: <a href="tel:(+57) 314 262 9189">(+57) 314 262 9189</a></p>
+            </div>
+            <form class="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensajes">Mensaje:</label>
+                <textarea id="mensajes" name="mensajes" rows="4" required></textarea>
+
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Zapatería Daniela. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

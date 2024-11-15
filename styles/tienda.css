@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fafafa;
+}
+
+header {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    margin: 0 12px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff5733;
+}
+
+.catalog {
+    padding: 40px;
+    text-align: center;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre elementos */
+    opacity: 0; /* Ocultar al cargar */
+    animation: fadeIn 1s forwards; /* Efecto de entrada */
+}
+
+.image-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Mantener el contenido dentro de los bordes */
+    transition: transform 0.3s ease; /* Transición al escalar */
+    position: relative; /* Para posicionar la descripción de hover */
+    width: 300px; /* Ancho fijo para los elementos */
+}
+
+.image-item img {
+    width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.image-description {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.hover-description {
+    position: absolute; /* Posicionar la descripción sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    display: flex; /* Flexbox para centrar el texto */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Ocultar al cargar */
+    transition: opacity 0.3s ease; /* Transición de aparición */
+}
+
+.image-item:hover .hover-description {
+    opacity: 1; /* Mostrar la descripción al pasar el cursor */
+}
+
+.image-item:hover {
+    transform: scale(1.05); /* Escalar al pasar el cursor */
+}
+
+footer {
+    background-color: #ff5733;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Animación de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Estilo del botón "Comprar" */
+.boton-comprar {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 300px; 
+    height: 30px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-comprar:hover {
+    background-color: #e04e29;
+    transform: scale(1.05);
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario dentro del modal */
+#form-compra label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#form-compra input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#confirmar-compra {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#confirmar-compra:hover {
+    background-color: #218838;
+}
